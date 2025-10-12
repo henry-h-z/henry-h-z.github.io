@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Custom Twist-Pen</title>
+    <meta name="description" content="A custom pen">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Custom Twist-Pen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="mrenderdragon.github.io/projects/twistpen">
+    <meta property="og:description" content="A custom pen">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="twistpen/twistpen.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+
+        <svg viewbox="0 0 100 100" class="sketch top left">
+            <g id="pencurl">
+                <path stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 20 4
+                l 10 -2
+                l 20 11
+                l 15 -12
+                l -10 -10
+                l -10 8
+                l 5 5
+                l 5 -4
+                "></path>
+
+                <path transform="rotate(90), scale(1, -1)" stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 20 4
+                l 10 -2
+                l 20 11
+                l 15 -12
+                l -10 -10
+                l -10 8
+                l 5 5
+                l 5 -4
+                "></path>
+
+                <path stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round"stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 6 6
+                l 3 12
+                l 8 6
+                l 6 -6
+                l -0 -7
+                l -4 -2
+                l -5 2
+                l 1 4
+                l 1 -0
+                "></path>
+            </g>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch top right">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom left">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom right">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg>
+
+        <!-- <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div> -->
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+                
+                <!-- <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing back.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div> -->
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <p style="text-align: center; font-size: min(8vh,8vw); margin: 0 0 3vmin 0;">~ Custom Twist Pen ~</p>
+                </div>
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 200px">
+                    <svg viewbox="0 0 100 75">
+
+                        <path stroke="#4a4a4a" stroke-width="2" 
+                        stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                        M 5 5
+                        h 15
+                        l 60 50
+                        h 15
+                        v 14
+                        c 0 5 -7 5 -7 0
+                        v -7
+                        h -11
+                        l -60 -50
+                        H 12
+                        v 7
+                        c 0 5 -7 5 -7 0
+                        Z
+                        "></path>
+                    </svg>
+                </div>
+                <div style="height: auto; flex: 1 1 auto; width: 200px; min-width: 200px; display: table;">
+                    <p style=" padding: 0 2vw 2vw 2vw; text-wrap: wrap; line-height: 150%; vertical-align: middle; display: table-cell;">
+                        - Designed to protect nib if dropped <br>
+                        - Smooth movement and secure locking <br>
+                        - Uses replacable Zebra F301 cartridges <br>
+                        - Hand-engraved design <br>
+                        - Machined on manual Sherline lathe <br>
+                        - Designed and drafted on paper
+                    </p>
+                </div>
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 200px">
+                    <img src="twistpen/core.jpg" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0;  width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="twistpen/pen photo-1.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="twistpen/pen photo-2.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 0 0 0; width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="twistpen/pen photo-3.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="twistpen/pen photo-4.jpg" style="flex: 1 1 auto; object-fit: cover; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+    <script src="global.js" defer></script>
+    <script>
+        // code here
+    </script>
+</body>
+</html>

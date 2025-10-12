@@ -1,0 +1,49 @@
+.pdfcontainer {
+    --total-scale-factor: 1;
+}
+
+.textLayer {
+    position: absolute;
+    text-align: initial;
+    inset: 0;
+    top: 0px;
+    left: 0px;
+    overflow: clip;
+    opacity: 1;
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+    forced-color-adjust: none;
+    transform-origin: 0 0;
+    caret-color: CanvasText;
+    z-index: 0;
+    width: 100%;
+
+    /* expected: when canvas is <width> px wide, adapt factor is 1px */
+    /* so when canvas is <vw> px wide, adapt factor is 1 * vw / width */
+    --adapt-factor: calc(var(--render-scale) * var(--parent-size-adapt) / var(--orig-width));
+    --scale-round-x: 1px;
+    --scale-round-y: 1px;
+}
+
+.pdfcanvas {
+    width: 100%;
+}
+
+.textLayer > :not(.markedContent), .textLayer .markedContent span:not(.markedContent) {
+    z-index: 1;
+}
+.textLayer :is(span, br) {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
+}
+
+.textLayer {
+  & ::selection {
+    background: color-mix(in srgb, AccentColor, transparent 75%);
+  }
+}

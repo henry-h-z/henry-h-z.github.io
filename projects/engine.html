@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Clockmaker's Heat Engine</title>
+    <meta name="description" content="A heat engine">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Clockmaker's Heat Engine">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="mrenderdragon.github.io/projects/engine">
+    <meta property="og:description" content="A heat engine">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="engine/engine.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+        <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div>
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+                
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing back.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div>
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <p style="text-align: center; font-size: min(8vh,5vw); margin: 0 0 3vmin 0;">-=O &nbspClockmaker's Heat Engine&nbsp O=-</p>
+                </div>
+
+                <div style="height: auto; flex: 2 1 0; padding: 0; min-width: 300px">
+                    <img src="engine/front tilt head.jpg" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+                <div style="height: auto; flex: 1 1 auto; width: 200px; min-width: 200px; display: table;">
+                    <p style=" padding: 0 0 5vw 5vw; text-wrap: wrap; line-height: 150%; vertical-align: middle; display: table-cell;">
+                        <!-- <span style="font-weight: bold; font-size: 120%">Features: </span> <br> -->
+                        - During testing, reached speed of 1600 RPM <br>
+                        - Space for future attachments <br>
+                        - Balanced using adjustment screws <br>
+                        - 12 x 10 = 120 indexing positions <br>
+                        - Hand-engraved flywheel
+                    </p>
+                </div>
+
+                <div style="height: auto; flex: 1 1 auto; width: 100%;">
+                    <p style="padding: 5vw 5vw 5vw 5vw; text-wrap: wrap; line-height: 120%; border: max(2px, 0.2vw) #4a4a4a solid">
+                        Manufactured using bandsaw, lathe, cnc (prototrak) and manual mills <br style="margin: 0 0 2% 0;">
+                        Designed in solidworks, including constraints and mates to model final assembly movement <br style="margin: 0 0 2% 0;">
+                        Followed and produced ASME standard drawings for custom parts
+                    </p>
+                </div>
+
+                <div style="height: auto; flex: 1 0 0;  width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="engine/head.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="engine/front tilt head.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="engine/front tilt tail.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 0 0 0; width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="engine/tail.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="engine/back tilt tail.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="engine/back.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 5vw; min-width: calc(100% - 10vw); display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <img src="engine/drawings/output assembly.png" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 150px; opacity:0;">
+
+                    <div class="drawingframeframe">
+                        <div class="arrow right" onclick="nextimage()"></div>
+                        <div class="arrow left" onclick="previmage()"></div>
+                        <div class="drawingframe id0"><img src="engine/drawings/output assembly.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id1 hide"><img src="engine/drawings/balance weight.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id2 hide"><img src="engine/drawings/output shaft.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id3 hide"><img src="engine/drawings/hub.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id4 hide"><img src="engine/drawings/flywheel.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id5 hide"><img src="engine/drawings/displacer connecting rod.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id6 hide"><img src="engine/drawings/piston connecting rod.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id7 hide"><img src="engine/drawings/bedplate.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id8 hide"><img src="engine/drawings/base.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id9 hide"><img src="engine/drawings/balance weight fixture.png" style="position:absolute; width:100%; height: 100%;"></div>
+                    </div>
+
+                    <div style=" position:relative; left:0; top: -100%; width: 100%; height: 2%;">
+                        <div class="drawingdotframe">
+                            <div class="drawingdot id0" onclick="setImage(0)"></div>
+                            <div class="drawingdot id1" onclick="setImage(1)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id2" onclick="setImage(2)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id3" onclick="setImage(3)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id4" onclick="setImage(4)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id5" onclick="setImage(5)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id6" onclick="setImage(6)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id7" onclick="setImage(7)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id8" onclick="setImage(8)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id9" onclick="setImage(9)" style="background-color: #4a4a4a00"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing top.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+    <script src="global.js" defer></script>
+    <script>
+        let curImage = 0;
+
+        function nextimage () {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = (curImage + 1)%10)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+
+        function previmage () {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = (curImage - 1 + 10)%10)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+
+        function setImage (imgid) {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = imgid)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+    </script>
+</body>
+</html>

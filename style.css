@@ -1,0 +1,269 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #7a7a7a;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vmin;
+    background-color: #aaaaa9;
+    transition: transform 500ms;
+    display: none;
+}
+
+.header.move3 {
+    transform: translateY(-100%);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vmin;
+    background-color: #e7e7e7;
+    transition: transform 500ms;
+
+    border-top: min(3px, 0.5vw) #323232 solid;
+}
+
+.footer.move3 {
+    transform: translateY(100%);
+}
+
+.projector {
+    position:fixed;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    height: 14vmin;
+    aspect-ratio: 5/1;
+}
+
+.projlight {
+    top: -98vh;
+    position: relative;
+    width: 98vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(114vh - 14vmin);
+    mix-blend-mode: hard-light;
+    filter:blur(5vmin);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms, filter 300ms;
+}
+
+.footer.move3 .projlight {
+    filter:blur(1vmin);
+    opacity: 0.8;
+}
+
+.footer .aboutme {
+    position: relative;
+    top: 0.7vmin;
+    /* left: calc((100% - 70vmin) / 4 - 5vmin); */
+    left: 2vmin;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.5vmin;
+
+    width: 0;
+    text-wrap: nowrap;
+    cursor:pointer;
+}
+
+.footer .aboutme:hover {
+    color: #888;
+}
+
+.content {
+    background-color:#fcfcfc;
+
+    position: absolute;
+    top: 0vmin;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+
+    min-height: calc(114vh - 14vmin);
+
+    padding: 10vmin 10vw 10vmin 10vw;
+
+    transition: transform 700ms;
+}
+
+.content.move3 {
+    transform: translateX(-50%) translateY(100%);
+}
+
+.cardholder {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 5vmin;
+    justify-content: space-between;
+}
+
+.cardsize {
+    border-radius: calc((40vw - 5vmin / 2) * 0.025);
+    aspect-ratio: 100/63;
+    position: relative;
+}
+
+.card {
+    background-color: #323232;
+    width: calc(50% - 5vmin /2);
+    flex-grow:0;
+    cursor: pointer;
+    /* filter: drop-shadow(0.6vw 0.6vw 0.5vw #000a); */
+    border: 0.25vw #323232 solid;
+    /* border-radius: calc((40vw - 5vmin / 2) * 0.025 + 3px); */
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        border: 0.5vw #323232 solid;
+    }
+
+    .cardsize {
+        border-radius: calc(80vw * 0.025);
+    }
+
+    .cardtext {
+        font-size: 4vw !important;
+    }
+
+    .cardbacktext {
+        font-size: 3.4vw !important;
+    }
+}
+
+.cardimage {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: 50% 50%;
+    transition: background-size 100ms, filter 100ms;
+}
+
+.card:hover .cardimage {
+    filter: brightness(0.5);
+    background-size: 120%;
+}
+
+.cardtext {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 50%;
+    text-align: right;
+    color: #fff;
+    margin: 0;
+
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
+
+    opacity: 0.9;
+    transition: opacity 100ms, color 100ms;
+}
+
+.darktext.cardtext {
+    color: #000;
+    opacity: 0.7;
+}
+
+.card:hover .cardtext {
+    opacity: 1;
+    color: #fff;
+}
+
+.card .backside {
+    display: none;
+}
+
+.backside {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    transform: translateZ(-1px) rotateY(180deg);
+
+    background-size: 100% 100%;
+    backface-visibility: visible;
+}
+
+.backside .reel1 {
+    r: calc((14 + var(--reel-am)) * 1%);
+}
+
+.backside .reel2 {
+    r: calc((14 + 15 - var(--reel-am)) * 1%);
+}
+
+.cardbacktext {
+    position: absolute;
+    left: 10%;
+    top: 11%;
+    width: 79%;
+    color: #000;
+    margin: 0;
+
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.7vw;
+
+    opacity: 0.7;
+    transition: opacity 100ms;
+}
+
+.card.active {
+    opacity:0;
+    pointer-events: none;
+}
+
+.animholder {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    pointer-events: none;
+}
+
+.cardanim {
+    position:absolute;
+    background-color: #323232;
+    transform-style: preserve-3d;
+    transition: transform 300ms, left 300ms, bottom 300ms;
+    pointer-events: none;
+    backface-visibility: hidden;
+}
+
+.cardanim.move1 {
+    left: 50% !important;
+    bottom: 18vmin !important;
+    transform: translateX(-50%) rotateY(180deg); 
+}
+
+.cardanim.move2 {
+    left: 50% !important;
+    bottom: 18vmin !important;
+    transform: translateX(-50%) translateY(190%) rotateY(180deg); 
+}

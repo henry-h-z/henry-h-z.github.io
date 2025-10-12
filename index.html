@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Henry Zhao's Portfolio</title>
+    <meta name="description" content="A gallery of my projects">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Henry Zhao's Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="mrenderdragon.github.io">
+    <meta property="og:description" content="A gallery of my projects">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <svg>
+        <defs>
+            <clipPath id="bodyClip" >
+                <path clip-rule="evenodd" d="
+                M 38.5 23.169
+                v 11
+                h 23
+                v -11
+                Z
+
+                M 0 0
+                H 100
+                V 63.3
+                H 0
+                Z
+
+                M 28.75 34.747
+                a 6 6 0 1 0 0 -12
+                a 6 6 0 1 0 0 12
+
+                M 71.25 34.747
+                a 6 6 0 1 0 0 -12
+                a 6 6 0 1 0 0 12
+
+                "/>
+            </clipPath>
+
+            <clipPath id="bodyCircles" >
+                <path clip-rule="evenodd" d="
+                M 38.5 23.169
+                v 11
+                h 23
+                v -11
+                Z
+
+                M 28.75 34.747
+                a 6 6 0 1 1 0 -12
+                a 6 6 0 1 0 0 12
+
+                M 71.25 34.747
+                a 6 6 0 1 1 0 -12
+                a 6 6 0 1 0 0 12
+                "/>
+            </clipPath>
+        </defs>
+    </svg>
+</head>
+
+<body>
+    <script>0</script>
+
+    <div class="content" id="content">
+        <div class="cardholder" id="cardholder">
+            <!-- <div class="card cardsize" onclick="usecard(event.ctrlKey, this)" onauxclick="usecard(true, this)" style="--reel-am: 6">
+                <div class="backside cardsize">
+                    <svg viewBox="0 0 100 63.3">
+
+                        <circle class="reel1" fill="#3b1f0b" cx="28.75" cy="28.747" r="18" clip-path="url(#bodyCircles)" />
+                        <circle class="reel2" fill="#3b1f0b" cx="71.25" cy="28.747" r="13" clip-path="url(#bodyCircles)" />
+
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(0 28.75 28.747)   translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(45 28.75 28.747)  translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(90 28.75 28.747)  translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(135 28.75 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(180 28.75 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(225 28.75 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(270 28.75 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="28.75" y="28.75" width="2" height="1.2" transform="  rotate(315 28.75 28.747) translate(5, 0) translate(-1, -0.4)" />
+
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(0 71.25 28.747)   translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(45 71.25 28.747)  translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(90 71.25 28.747)  translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(135 71.25 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(180 71.25 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(225 71.25 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(270 71.25 28.747) translate(5, 0) translate(-1, -0.4)" />
+                        <rect fill="#c8c8c8" x="71.25" y="28.75" width="2" height="1.2" transform="  rotate(315 71.25 28.747) translate(5, 0) translate(-1, -0.4)" />
+
+
+                        <circle fill="#cacaca" cx="28.75" cy="28.747" r="11" clip-path="url(#bodyCircles)" />
+                        <circle fill="#cacaca" cx="71.25" cy="28.747" r="11" clip-path="url(#bodyCircles)" />
+
+                        <rect fill="#323232" x="0" y="0" width="100" height="63.3" rx="2.5" clip-path="url(#bodyClip)" />
+                        <rect fill="#fff9f0" x="5.5" y="5.5" width="88" height="39.5" rx="2" clip-path="url(#bodyClip)" />
+                        <rect fill="#323232" x="19.75" y="19.747" width="59.5" height="18" rx="2" clip-path="url(#bodyClip)" />
+                        <circle stroke="#dddddd" stroke-width="1.2" fill="transparent" cx="28.75" cy="28.747" r="6" />
+                        <circle stroke="#dddddd" stroke-width="1.2" fill="transparent" cx="71.25" cy="28.747" r="6" />
+
+                        <path fill="#222" d="
+                            M 15.5 63.4
+                            l 5 -15.5
+                            h 59
+                            l 5 15.5
+                            h -2
+                            l -4.9 -14.5
+                            h -55
+                            l -4.9 14.5
+                            Z
+                            "/>
+                    </svg>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="animholder" id="animholder"></div>
+
+    <div class="header" id="header">
+
+    </div>
+
+    <div class="footer" id="footer">
+
+        <!-- <div class="aboutme">About Me</div> -->
+
+        <div id="footerLight"></div>
+        <div id="footerBody"></div>
+    </div>
+
+    <script src="carddata.js" defer></script>
+    <script src="code.js" defer></script>
+    <script src="projects/global.js" defer></script>
+</body>
+</html>

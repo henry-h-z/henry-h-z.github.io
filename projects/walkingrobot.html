@@ -1,0 +1,241 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Quadruped Walking Robot</title>
+    <meta name="description" content="A low-cost walking robot">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Quadruped Walking Robot">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="mrenderdragon.github.io/projects/walkingrobot">
+    <meta property="og:description" content="A low-cost walking robot">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="walkingrobot/walkingrobot.css">
+    <link rel="stylesheet" href="pdfUtil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="../mod/pdfjs/web/viewer.css"> -->
+</head>
+
+<body>
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+
+        <!-- <svg viewbox="0 0 100 100" class="sketch top left">
+            <g id="pencurl">
+                <path stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 20 4
+                l 10 -2
+                l 20 11
+                l 15 -12
+                l -10 -10
+                l -10 8
+                l 5 5
+                l 5 -4
+                "></path>
+
+                <path transform="rotate(90), scale(1, -1)" stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 20 4
+                l 10 -2
+                l 20 11
+                l 15 -12
+                l -10 -10
+                l -10 8
+                l 5 5
+                l 5 -4
+                "></path>
+
+                <path stroke="#4a4a4a" stroke-width="3" 
+                stroke-linecap="round"stroke-linejoin="round" fill="none" d="
+                M 15 15
+                l 6 6
+                l 3 12
+                l 8 6
+                l 6 -6
+                l -0 -7
+                l -4 -2
+                l -5 2
+                l 1 4
+                l 1 -0
+                "></path>
+            </g>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch top right">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom left">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom right">
+            <use href="#pencurl" x="0" y="0"></use>
+        </svg> -->
+
+        <!-- <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div> -->
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <p style="text-align: center; font-size: min(8vh,8vw); margin: 0 0 3vmin 0;">Quadruped Walking Robot</p>
+                </div>
+
+                 <div style="height: auto; flex: 1 0 0; padding: 5vw; min-width: calc(100% - 10vw); display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <img src="walkingrobot/presPreview.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 150px; opacity:0;">
+
+                    <div class="drawingframeframe">
+                        <div class="arrow right" onclick="nextimage()" id="rightarrow"></div>
+                        <div class="arrow left hide" onclick="previmage()" id="leftarrow"></div>
+                        <div class="drawingframe id0 pdfcontainer"></div>
+                        <div class="drawingframe id1 pdfcontainer hide"></div>
+                        <div class="drawingframe id2 pdfcontainer hide"></div>
+                        <div class="drawingframe id3 pdfcontainer hide"></div>
+                        <div class="drawingframe id4 pdfcontainer hide"></div>
+                        <div class="drawingframe id5 pdfcontainer hide"></div>
+                        <div class="drawingframe id6 pdfcontainer hide"></div>
+                        <div class="drawingframe id7 pdfcontainer hide"></div>
+                        <div class="drawingframe id8 pdfcontainer hide"></div>
+                        <div class="drawingframe id9 pdfcontainer hide"></div>
+                        <div class="drawingframe id10 pdfcontainer hide"></div>
+                        <div class="drawingframe id11 pdfcontainer hide"></div>
+                    </div>
+
+                    <div style=" position:relative; left:0; top: -100%; width: 100%; height: 2%;">
+                        <div class="drawingdotframe">
+                            <div class="drawingdot id0" onclick="setImage(0)"></div>
+                            <div class="drawingdot id1" onclick="setImage(1)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id2" onclick="setImage(2)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id3" onclick="setImage(3)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id4" onclick="setImage(4)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id5" onclick="setImage(5)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id6" onclick="setImage(6)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id7" onclick="setImage(7)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id8" onclick="setImage(8)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id9" onclick="setImage(9)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id10" onclick="setImage(10)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id11" onclick="setImage(11)" style="background-color: #4a4a4a00"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 10vw; min-width: calc(100% - 20vw); display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <iframe src="https://www.youtube.com/embed/c8eXe0KFkik?si=74NhNIAgB-jh3nKj" 
+                    style="width:100%; aspect-ratio:560/315"
+                    title="YouTube video player" frameborder="0" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 0 0 0; min-width: calc(100%); display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <object
+                        data="walkingrobot/ResearchPaper.pdf"
+                        type="application/pdf"
+                        style="width: 100%; height: 80vh"
+                        title="Embedded PDF Viewer">
+                        <p>
+                            Your browser does not support PDFs.
+                            <a href="walkingrobot/ResearchPaper.pdf">[Download the PDF]</a>
+                        </p>
+                    </object>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+     
+    <script src="../mod/pdfjs/build/pdf.mjs" type="module"></script>
+    <script src="global.js" defer></script>
+    <script src="pdfUtil.js" defer></script>
+    <script>
+        let curImage = 0;
+        let numElements = 12;
+
+        function nextimage () {
+            setImage(curImage+1);
+        }
+
+        function previmage () {
+            setImage(curImage-1);
+        }
+
+        function setImage (imgid) {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = imgid)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+            if (curImage == numElements-1) {
+                document.getElementById("rightarrow").classList.add("hide");
+                document.getElementById("leftarrow").classList.remove("hide");
+            } else if (curImage == 0) {
+                document.getElementById("rightarrow").classList.remove("hide");
+                document.getElementById("leftarrow").classList.add("hide");
+            } else {
+                document.getElementById("rightarrow").classList.remove("hide");
+                document.getElementById("leftarrow").classList.remove("hide");
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            // everything including pdfjslib loaded
+            const presentationPdfUrl = './walkingrobot/Presentation.pdf';
+
+            pdfjsLib.getDocument(presentationPdfUrl).promise.then(function(pdfDoc) {
+                for (let i = 0; i < numElements; i++) {
+                    let frame = document.querySelector(".drawingframe.id"+i);
+
+                    let canvas = document.createElement("canvas");
+                    canvas.id = "pdfcanvas"+i;
+                    canvas.classList.add("pdfcanvas");
+                    frame.appendChild(canvas);
+
+                    let text = document.createElement("div");
+                    text.classList.add("textLayer")
+                    frame.appendChild(text)
+
+                    renderPage(pdfDoc, i+1, canvas, text);
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

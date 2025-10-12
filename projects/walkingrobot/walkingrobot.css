@@ -1,0 +1,160 @@
+p {
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-size: min(max(2vw, 16px), 25px);
+}
+
+
+.content .topbar .backbutton {
+    position: absolute;
+    top: 4vw;
+    left: 6vw;
+    width: 12vw;
+    height: 4vw;
+
+    /* border-radius: 1vmin; */
+    border: max(0.2vw, 2px) solid #4a4a4a;    
+
+    text-align: center;
+    font-size: 2.4vw;
+    line-height: 4vw;
+
+    color: #4a4a4a;
+
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    cursor:pointer;
+    
+    background-color: #e9e9e9a9;
+    transition: background-color 200ms;
+}
+
+.content .topbar .backbutton:hover {
+    background-color: #aaaaaaa9;
+}
+
+.content .spacer.top {
+    width: 100%;
+    height: 10vw;
+}
+
+.content .spacer.bottom {
+    width: 100%;
+    height: 10vw;
+}
+
+.content .body {
+    position:relative;
+
+    top: 1vmin;
+    left: 50%;
+    width: 76vw;
+    --parent-size-adapt: 66vw;
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+.sketch {
+    position:absolute;
+    width: 20vw;
+}
+
+.sketch.top {
+    top: 0;
+}
+
+.sketch.bottom {
+    bottom: 0;
+    transform: scaleY(-1);
+}
+
+.sketch.left {
+    left: 0;
+}
+
+.sketch.right {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.sketch.bottom.right {
+    transform: scale(-1, -1);
+}
+
+
+.drawingframeframe {
+    position:relative; 
+    left:0; 
+    top: -100%; 
+    width: 100%; 
+    height: 100%;
+}
+
+.drawingframe {
+    position:absolute; 
+    left:0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    /* user-select: none; */
+
+    transition: opacity 0.1s;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drawingdotframe {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    user-select: none;
+}
+
+.drawingdot {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4a4a4a66;
+    border: 2px #4a4a4a88 solid;
+    display:inline-block;
+    transition: background-color 0.1s;
+
+    cursor: pointer;
+}
+
+.arrow {
+    position:absolute; 
+    top: 50%; 
+    height: 0; 
+    width: 0; 
+    transform: translateY(-50%); 
+    border-top: 5vw solid transparent; 
+    border-bottom: 5vw solid transparent; 
+    cursor: pointer;
+}
+
+.arrow.right {
+    right: -5vw; 
+    border-left: 3vw solid #4a4a4a33;
+}
+
+.arrow.right:hover {
+    border-left: 3vw solid #4a4a4a66;
+}
+
+.arrow.left {
+    left: -5vw; 
+    border-right: 3vw solid #4a4a4a33;
+}
+
+.arrow.left:hover {
+    border-right: 3vw solid #4a4a4a66;
+}
