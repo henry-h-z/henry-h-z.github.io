@@ -1,0 +1,204 @@
+p {
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-size: min(max(2vw, 16px), 25px);
+}
+
+.content .topbar .backbutton {
+    position: absolute;
+    top: 6vw;
+    left: 6vw;
+    width: 12vw;
+    height: 4vw;
+
+    /* border-radius: 1vmin; */
+    border: max(0.2vw, 2px) solid #8a8a8a;    
+
+    text-align: center;
+    font-size: 2.4vw;
+    line-height: 4vw;
+
+    color: #4a4a4a;
+
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    cursor:pointer;
+    
+    background-color: #e9e9e9a9;
+    transition: background-color 200ms;
+}
+
+.content .topbar .backbutton:hover {
+    background-color: #dddddda9;
+}
+
+.content .spacer.top {
+    width: 100%;
+    height: 5vw;
+}
+
+.content .spacer.bottom {
+    width: 100%;
+    height: 20vw;
+}
+
+.content .body {
+    position:relative;
+
+    top: 1vmin;
+    left: 50%;
+    width: 86vw;
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+
+.sketch {
+    background-color: #8a8a8a;
+    position:absolute;
+}
+
+.sketch.left,
+.sketch.right {
+    top: 3vw; 
+    height: calc(100% - 19vw);
+    width: 0.2vw; 
+    min-width: 2px;
+}
+
+.sketch.left {
+    left: 5vw;
+}
+
+.sketch.right {
+    right: 5vw;
+}
+
+.sketch.top,
+.sketch.bottom {
+    left: 3vw; 
+    width: calc(100% - 6vw); 
+    height: 0.2vw; 
+    min-height: 2px;
+}
+
+.sketch.top {
+    top: 5vw; 
+}
+
+.sketch.bottom {
+    bottom: 18vw;
+}
+
+.drawingframeframe {
+    position:relative; 
+    left:0; 
+    top: -100%; 
+    width: 100%; 
+    height: 100%;
+}
+
+.drawingframe {
+    position:absolute; 
+    left:0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    user-select: none;
+
+    transition: opacity 0.1s;
+}
+
+.drawingframe.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drawingdotframe {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    user-select: none;
+}
+
+.drawingdot {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #8a8a8a66;
+    border: 2px #8a8a8a88 solid;
+    display:inline-block;
+    transition: background-color 0.1s;
+
+    cursor: pointer;
+}
+
+.arrow {
+    position:absolute; 
+    top: 50%; 
+    height: 0; 
+    width: 0; 
+    transform: translateY(-50%); 
+    border-top: 5vw solid transparent; 
+    border-bottom: 5vw solid transparent; 
+    cursor: pointer;
+}
+
+.arrow.right {
+    right: -5vw; 
+    border-left: 3vw solid #8a8a8a33;
+}
+
+.arrow.right:hover {
+    border-left: 3vw solid #8a8a8a66;
+}
+
+.arrow.left {
+    left: -5vw; 
+    border-right: 3vw solid #4a4a4a33;
+}
+
+.arrow.left:hover {
+    border-right: 3vw solid #4a4a4a66;
+}
+
+@media (max-width: 813px) {
+    #sandwichtext {
+        order: 0 !important;
+    }
+
+    #wallet1 {
+        padding: 0 2.5vw 2.5vw 0 !important;
+    }
+    
+    #wallet2 {
+        padding: 0 2.5vw 2.5vw 0 !important;
+    }
+}
+
+@media (max-width: 493px) {
+    #wallet1 {
+        padding: 0 2.5vw 2.5vw 2.5vw !important;
+    }
+    
+    #wallet2 {
+        padding: 2.5vw 2.5vw 5vw 2.5vw !important;
+    }
+
+    #sandwichtext {
+        order: 0 !important;
+        min-width: 0 !important;
+    }
+}
+
+@media (max-width: 841px) {
+    #opentool {
+        min-width: 100% !important;
+        padding: 2.5vw 0 0 0 !important;
+    }
+    
+}

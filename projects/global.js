@@ -160,7 +160,7 @@ const footerBodyHTML = `
             "></path>
 
             <text x="35" y="57" class="svgtext">Henry Zhao</text>
-            <g><a href="mailto:henryzhao@zlww.com"><svg class="email button" 
+            <g><a href="mailto:henry@zlww.com" target="_blank"><svg class="email button" 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 512 512" 
                 x="440"  y="40" width="20" height="20" ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -170,7 +170,7 @@ const footerBodyHTML = `
                 M0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"></path>
             </svg></a></g>
 
-            <g><a href="https://www.linkedin.com/in/henry--zhao/"><svg class="linkedin button" 
+            <g><a href="https://www.linkedin.com/in/henry--zhao/" target="_blank"><svg class="linkedin button" 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 448 512"
                 x="415"  y="41" width="18" height="18"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
