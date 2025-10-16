@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: #7a7a7a;
+    --amcardinrow: 2;
 }
 
 .header {
@@ -112,14 +113,14 @@ body {
 }
 
 .cardsize {
-    border-radius: calc((40vw - 5vmin / 2) * 0.025);
+    border-radius: calc((40vw / var(--amcardinrow) * 2 - 5vmin / 2) * 0.025);
     aspect-ratio: 100/63;
     position: relative;
 }
 
 .card {
     background-color: #323232;
-    width: calc(50% - 5vmin /2);
+    width: calc(100% / var(--amcardinrow) - 5vmin /2);
     flex-grow:0;
     cursor: pointer;
     /* filter: drop-shadow(0.6vw 0.6vw 0.5vw #000a); */
@@ -175,7 +176,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 2vw;
+    font-size: calc(2vw / var(--amcardinrow) * 2);
 
     opacity: 0.9;
     transition: opacity 100ms, color 100ms;
@@ -227,7 +228,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.7vw;
+    font-size: calc(1.7vw / var(--amcardinrow) * 2);
 
     opacity: 0.7;
     transition: opacity 100ms;
