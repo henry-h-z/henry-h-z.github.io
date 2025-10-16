@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Punch and Die</title>
+    <meta name="description" content="Punch and die for battery tabs">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Punch and Die">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="henry-h-z.github.io/projects/punch">
+    <meta property="og:description" content="Punch and die for battery tabs">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="punch/punch.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+        <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div>
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+                
+                <!-- <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing back.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div> -->
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <p style="text-align: center; font-size: min(8vh,5vw); margin: 0 0 3vmin 0;">Punch and Die</p>
+                </div>
+
+                <div style="height: auto; flex: 2 1 0; padding: 0 0 2.5vw 0; min-width: 300px">
+                    <img src="punch/full front.jpg" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+                <div style="height: auto; flex: 1 1 auto; width: 200px; min-width: 300px; display: table;">
+                    <p style=" padding: 0 0 5vw 5vw; text-wrap: wrap; line-height: 150%; vertical-align: middle; display: table-cell;">
+                        <!-- <span style="font-weight: bold; font-size: 120%">Features: </span> <br> -->
+                        - Designed to punch precise, repeatable mounting holes in pouch cell battery tabs (nickel-plated copper) <br>
+                        - Die made from A2 tool steel and hardened to 50HRC <br>
+                        - Punch made from HSS precision ground steel pins <br>
+                        - 3D-printed cover + kapton tape for electrical insulation and safety
+                    </p>
+                </div>
+
+                <!-- <div style="height: auto; flex: 1 1 auto; width: 100%;">
+                    <p style="padding: 5vw 5vw 5vw 5vw; text-wrap: wrap; line-height: 120%; border: max(2px, 0.2vw) #4a4a4a solid">
+                        Manufactured using bandsaw, manual lathes, manual mills, and cnc mills (Prototrak) <br style="margin: 0 0 2% 0;">
+                        Designed in Solidworks, including constraints and mates to model final assembly movement <br style="margin: 0 0 2% 0;">
+                        Followed and produced ASME standard drawings for custom parts
+                    </p>
+                </div> -->
+
+                <div style="height: auto; flex: 1 0 0;  width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="punch/apart side.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="punch/apart front.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="punch/caseless front.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 0 0 0; width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="punch/guide solo.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="punch/metal side by side.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                    <img src="punch/die solo top.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 200px; border: max(2px, 0.2vw) #4a4a4a solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 5vw; min-width: calc(100% - 10vw); display: flex; flex-direction: row; flex-wrap: wrap;">
+                    <img src="punch/drawings/die holder drawing.png" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 150px; opacity:0;">
+
+                    <div class="drawingframeframe">
+                        <div class="arrow right" onclick="nextimage()"></div>
+                        <div class="arrow left" onclick="previmage()"></div>
+                        <div class="drawingframe id0"><img src="punch/drawings/die holder drawing.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id1 hide"><img src="punch/drawings/die drawing.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id2 hide"><img src="punch/drawings/guide drawing.png" style="position:absolute; width:100%; height: 100%;"></div>
+                        <div class="drawingframe id3 hide"><img src="punch/drawings/cap drawing.png" style="position:absolute; width:100%; height: 100%;"></div>
+                    </div>
+
+                    <div style=" position:relative; left:0; top: -100%; width: 100%; height: 2%;">
+                        <div class="drawingdotframe">
+                            <div class="drawingdot id0" onclick="setImage(0)"></div>
+                            <div class="drawingdot id1" onclick="setImage(1)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id2" onclick="setImage(2)" style="background-color: #4a4a4a00"></div>
+                            <div class="drawingdot id3" onclick="setImage(3)" style="background-color: #4a4a4a00"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+    <script src="global.js" defer></script>
+    <script>
+        let curImage = 0;
+
+        function nextimage () {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = (curImage + 1)%4)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+
+        function previmage () {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = (curImage - 1 + 4)%4)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+
+        function setImage (imgid) {
+            document.querySelector(".drawingframe.id"+curImage).classList.add("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a00";
+            document.querySelector(".drawingframe.id"+(curImage = imgid)).classList.remove("hide");
+            document.querySelector(".drawingdot.id"+curImage).style.backgroundColor = "#4a4a4a66";
+        }
+    </script>
+</body>
+</html>

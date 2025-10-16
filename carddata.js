@@ -6,6 +6,12 @@ cards = [
         dark:true
     },
     {
+        title:"Punch and Die",
+        url:"projects/punch.html",
+        image:"projects/punch/full closeup.jpg",
+        dark:true
+    },
+    {
         title:"Clockmaker's Heat Engine",
         url:"projects/engine.html",
         image:"projects/engine/front tilt tail.jpg",
