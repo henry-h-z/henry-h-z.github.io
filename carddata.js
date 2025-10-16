@@ -1,5 +1,11 @@
 cards = [
     {
+        title:"Space Chess Set",
+        url:"projects/chess.html",
+        image:"projects/chess/playing close.jpg",
+        dark:true
+    },
+    {
         title:"Wallet Pliers",
         url:"projects/multitool.html",
         image:"projects/tool/closed dynamic.jpg",

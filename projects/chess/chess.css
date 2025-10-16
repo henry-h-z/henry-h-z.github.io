@@ -1,0 +1,175 @@
+p {
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-size: min(max(2vw, 16px), 25px);
+}
+
+body {
+    background-color: #111111;
+    animation: bodyfadedark 500ms;
+}
+
+@keyframes bodyfadedark {
+    0% {background-color: #b6b6b6}
+    100% {background-color: #111111}
+}
+
+.content {
+    mix-blend-mode: normal  !important;
+}
+
+.projlight {
+    opacity: 0.2 !important;
+}
+
+.content .topbar .backbutton {
+    position: absolute;
+    top: 3vw;
+    left: 10vw;
+    width: 12vw;
+    height: 4vw;
+
+    /* border-radius: 1vmin; */
+    /* border: max(0.2vw, 2px) solid #4a4a4a;     */
+
+    text-align: center;
+    font-size: 2.4vw;
+    line-height: 4vw;
+
+    color: #666;
+
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    cursor:pointer;
+    
+    /* background-color: #e9e9e9a9; */
+    transition: color 200ms;
+}
+
+.content .topbar .backbutton:hover {
+    color: #aaaaaa;
+}
+
+.content .spacer.top {
+    width: 100%;
+    height: 5vw;
+}
+
+.content .spacer.bottom {
+    width: 100%;
+    height: 20vw;
+}
+
+.content .body {
+    position:relative;
+
+    top: 1vmin;
+    left: 50%;
+    width: 86vw;
+    transform: translateX(-50%);
+
+    z-index: 1;
+}
+.sketch {
+    position:absolute;
+    width: 15vw;
+}
+
+.sketch.top {
+    top: 0;
+}
+
+.sketch.bottom {
+    bottom: 0;
+    transform: scaleY(-1);
+}
+
+.sketch.left {
+    left: 0;
+}
+
+.sketch.right {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.sketch.bottom.right {
+    transform: scale(-1, -1);
+}
+
+
+.drawingframeframe {
+    position:relative; 
+    left:0; 
+    top: -100%; 
+    width: 100%; 
+    height: 100%;
+}
+
+.drawingframe {
+    position:absolute; 
+    left:0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    user-select: none;
+
+    transition: opacity 0.1s;
+}
+
+.drawingframe.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drawingdotframe {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    user-select: none;
+}
+
+.drawingdot {
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4a4a4a66;
+    border: 2px #4a4a4a88 solid;
+    display:inline-block;
+    transition: background-color 0.1s;
+
+    cursor: pointer;
+}
+
+.arrow {
+    position:absolute; 
+    top: 50%; 
+    height: 0; 
+    width: 0; 
+    transform: translateY(-50%); 
+    border-top: 5vw solid transparent; 
+    border-bottom: 5vw solid transparent; 
+    cursor: pointer;
+}
+
+.arrow.right {
+    right: -5vw; 
+    border-left: 3vw solid #4a4a4a33;
+}
+
+.arrow.right:hover {
+    border-left: 3vw solid #4a4a4a66;
+}
+
+.arrow.left {
+    left: -5vw; 
+    border-right: 3vw solid #4a4a4a33;
+}
+
+.arrow.left:hover {
+    border-right: 3vw solid #4a4a4a66;
+}

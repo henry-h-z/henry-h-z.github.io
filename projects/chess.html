@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Space Chess Set</title>
+    <meta name="description" content="A space-themed chess set">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Space Chess Set">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="henry-h-z.github.io/projects/chess">
+    <meta property="og:description" content="A space-themed chess set">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="chess/chess.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+
+        <svg viewbox="0 0 100 100" class="sketch top left">
+            <g id="saturn">
+                <circle cx="50" cy="50" r="20" 
+                stroke="#666" stroke-width="3" fill="none" ></circle>
+                
+                <path stroke="#666666" stroke-width="3" 
+                stroke-linecap="round" stroke-linejoin="round" fill="none" d="
+                M 30 55
+                C 5 85 5 105 55 55
+                C 105 5 85 5 55 30
+                "></path>
+            </g>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch top right">
+            <use href="#saturn" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom left">
+            <use href="#saturn" x="0" y="0"></use>
+        </svg>
+
+        <svg viewbox="0 0 100 100" class="sketch bottom right">
+            <use href="#saturn" x="0" y="0"></use>
+        </svg>
+
+        <!-- <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div> -->
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+                
+                <!-- <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing back.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div> -->
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <p style="text-align: center; font-size: min(8vh,8vw); margin: 0 0 3vmin 0; color: #cccccc">~ Space Chess Set ~</p>
+                </div>
+
+                <div style="height: auto; flex: 1 1 0; padding: 0 0 2vw 0; min-width: 200px">
+                    <div style="position: relative">
+                        <img src="chess/outside full.jpg" style="object-fit: contain; width: 100%; max-width: 100%;">
+                        <p style="position: absolute; top: 1vw; left: 1vw; padding: 1vw; margin: 0; text-wrap: wrap; line-height: 150%; vertical-align: middle; display: table-cell; 
+                        color: #eeeeee; font-weight: bold; font-size: 2.1vw; background-color: #111111bb;">
+                            - Pieces themed around planets and rockets <br>
+                            - Board themed around orbits <br>
+                            - Pieces with Haas TL1 CNC lathe <br>
+                            - Board machined on CNC router <br>
+                            - Aluminum inserts outsourced to OshCut <br>
+                            - Acrylic board inserts cut using laser cutter
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div style="height: auto; flex: 1 1 auto; width: 200px; min-width: 200px; display: table;">
+                    <p style=" padding: 0 2vw 2vw 2vw; text-wrap: wrap; line-height: 150%; vertical-align: middle; display: table-cell;">
+                        - Pieces themed around planets and rockets <br>
+                        - Board themed around orbits <br>
+                        - Pieces with Haas TL1 CNC lathe <br>
+                        - Board machined on CNC router <br>
+                        - Acrylic board inserts cut using laser cutter
+                    </p>
+                </div> -->
+
+                <div style="height: auto; flex: 1 0 0;  width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="chess/outside top.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="chess/outside close.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; padding: 2vw 0 0 0; width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="chess/pieces.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="chess/all together.jpg" style="flex: 1 1 auto; object-fit: contain; width: 40%; min-width: 300px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                </div>
+
+                <div style="height: auto; flex: 1 0 0;  padding: 2vw 0 0 0; width: 100%; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="chess/playing side.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="chess/playing top.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                    <img src="chess/playing front.jpg" style="flex: 1 1 auto; object-fit: contain; width: 30%; min-width: 100px; border: max(2px, 0.2vw) #4a4a4a00 solid">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+    <script src="global.js" defer></script>
+    <script>
+        // code here
+    </script>
+</body>
+</html>
