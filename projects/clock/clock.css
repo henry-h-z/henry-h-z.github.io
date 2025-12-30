@@ -3,24 +3,6 @@ p {
     font-size: min(max(2vw, 16px), 25px);
 }
 
-body {
-    background-color: #5d7f9c;
-    animation: bodyfadedark 500ms;
-}
-
-@keyframes bodyfadedark {
-    0% {background-color: #b6b6b6}
-    100% {background-color: #5d7f9c}
-}
-
-.content {
-    mix-blend-mode: normal  !important;
-}
-
-.projlight {
-    opacity: 0.5 !important;
-}
-
 .content .topbar .backbutton {
     position: absolute;
     top: 6vw;
@@ -28,14 +10,14 @@ body {
     width: 12vw;
     height: 4vw;
 
-    border-radius: 2vmin;
-    /* border: max(0.2vw, 2px) solid #8a8a8a;     */
+    /* border-radius: 1vmin; */
+    border: max(0.2vw, 2px) solid #4a4a4a;    
 
     text-align: center;
     font-size: 2.4vw;
     line-height: 4vw;
 
-    color: #ececec;
+    color: #4a4a4a;
 
     font-family: "Quicksand", Helvetica, sans-serif;
     font-optical-sizing: auto;
@@ -44,13 +26,12 @@ body {
 
     cursor:pointer;
     
-    /* background-color: #e9e9e9a9; */
-    transition: background-color 200ms, box-shadow 500ms;
+    background-color: #e9e9e9a9;
+    transition: background-color 200ms;
 }
 
 .content .topbar .backbutton:hover {
-    background-color: #657e9656;
-    box-shadow: #cdd6e09e 0 0 2vw 2vw;
+    background-color: #aaaaaaa9;
 }
 
 .content .spacer.top {
@@ -75,7 +56,7 @@ body {
 }
 
 .sketch {
-    background-color: #8a8a8a;
+    background-color: #4a4a4a;
     position:absolute;
 }
 
@@ -148,8 +129,8 @@ body {
     aspect-ratio: 1/1;
     height: 100%;
     border-radius: 50%;
-    background-color: #8a8a8a66;
-    border: 2px #8a8a8a88 solid;
+    background-color: #4a4a4a66;
+    border: 2px #4a4a4a88 solid;
     display:inline-block;
     transition: background-color 0.1s;
 
@@ -169,11 +150,11 @@ body {
 
 .arrow.right {
     right: -5vw; 
-    border-left: 3vw solid #8a8a8a33;
+    border-left: 3vw solid #4a4a4a33;
 }
 
 .arrow.right:hover {
-    border-left: 3vw solid #8a8a8a66;
+    border-left: 3vw solid #4a4a4a66;
 }
 
 .arrow.left {
@@ -183,51 +164,4 @@ body {
 
 .arrow.left:hover {
     border-right: 3vw solid #4a4a4a66;
-}
-
-@media (max-width: 813px) {
-    #sandwichtext {
-        order: 0 !important;
-    }
-
-    #wallet1 {
-        padding: 0 2.5vw 2.5vw 0 !important;
-    }
-    
-    #wallet2 {
-        padding: 0 2.5vw 2.5vw 0 !important;
-    }
-}
-
-@media (max-width: 493px) {
-    #wallet1 {
-        padding: 0 2.5vw 2.5vw 2.5vw !important;
-    }
-    
-    #wallet2 {
-        padding: 2.5vw 2.5vw 5vw 2.5vw !important;
-    }
-
-    #sandwichtext {
-        order: 0 !important;
-        min-width: 0 !important;
-    }
-}
-
-@media (max-width: 841px) {
-    #opentool {
-        min-width: 100% !important;
-        padding: 2.5vw 0 0 0 !important;
-    }
-    
-}
-
-
-.ripple {
-    border-radius: 5vw;
-    /* transition: box-shadow 500ms; */
-}
-
-.ripple:hover {
-    /* box-shadow: #e9f0f8be 0 0 2vw 2vw; */
 }

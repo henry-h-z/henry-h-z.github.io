@@ -2,8 +2,8 @@ cards = [
     {
         title:"Cuckoo Clock",
         url:"projects/clock.html",
-        image:"projects/fish/black close.jpg",
-        dark:true
+        image:"projects/clock/front close.jpg",
+        dark:false
     },
     {
         title:"Articulated Fish",
