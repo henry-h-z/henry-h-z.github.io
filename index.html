@@ -131,17 +131,30 @@
 
     <div class="animholder" id="animholder"></div>
 
-    <div class="header" id="header">
+    <div class="header" id="header"></div>
 
+    <div id="blanker" class="blanker" onclick="abtmeHide()" hidden=""></div>
+    <div id="aboutmebox" class="aboutmebox">
+        <h1>About Me:</h1>
+        <p>
+            Hi! I'm Henry Zhao, currently an undergrad studying Mechanical Engineering at the University of Pennsylvania. 
+            I love turning sketches into designs and bringing them into the real world, whether it's robots, <a href="projects/punch">tools</a>, or <a href="projects/clock">class design projects</a>. 
+            My main interest is in robotics - I want to make things that will have a positive impact on our future. 
+            I've been making things ever since I was in elementary school, starting with spring-loaded boxes and working my way to <a href="projects/walkingrobot">autonomous walking robots</a>. 
+            Along the way, I've picked up experience in a wide variety of skills, including basic electronics, CAD, design for manufacturing, and how to write control algorithms, while also learning how to efficiently diagnose and fix any issues that come up.
+            </br></br>
+            Outside of robotics, I like learning about all kinds of historical engineering, from forging primitive tools to exploring the intricacies of clocks and watchmaking.
+        </p>
+        <h1 class="aboutmeX" onclick="abtmeHide()">X</h1>
     </div>
 
     <div class="footer" id="footer">
-
-        <!-- <div class="aboutme">About Me</div> -->
+        <div class="aboutme" onclick="abtmeShow()">About Me</div>
 
         <div id="footerLight"></div>
         <div id="footerBody"></div>
     </div>
+
 
     <script src="carddata.js" defer></script>
     <script src="code.js" defer></script>

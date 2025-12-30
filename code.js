@@ -150,3 +150,29 @@ cards.forEach((card) => {
 
     cardholder.append(div);
 });
+
+function abtmeShow() {
+    document.getElementById("blanker").hidden = false;
+    window.setTimeout(() => {
+        document.getElementById("blanker").classList.add("active");
+        document.getElementById("aboutmebox").classList.add("active");
+        document.getElementById("footer").classList.add("movespec");
+    }, 10)
+}
+
+function abtmeHide() {
+    document.getElementById("blanker").classList.remove("active");
+    document.getElementById("aboutmebox").classList.remove("active");
+    document.getElementById("footer").classList.remove("movespec");
+
+    localStorage.setItem("abtmeTime", Date.now());
+
+    window.setTimeout(() => {
+        document.getElementById("blanker").hidden = true;
+    }, 600)
+}
+
+// 1 day = 24hr * 60min * 60sec * 1000ms
+if(!(abtmeLastClose = localStorage.getItem("abtmeTime")) || abs(Date.now() - abtmeLastClose) > 1 * 24 * 60 * 60 * 1000) {
+    abtmeShow();
+}

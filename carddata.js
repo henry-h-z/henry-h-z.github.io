@@ -1,25 +1,31 @@
 cards = [
     {
+        title:"Articulated Fish",
+        url:"projects/fish",
+        image:"projects/fish/black close.jpg",
+        dark:true
+    },
+    {
         title:"Space Chess Set",
-        url:"projects/chess.html",
+        url:"projects/chess",
         image:"projects/chess/playing close.jpg",
         dark:true
     },
     {
         title:"Wallet Pliers",
-        url:"projects/multitool.html",
+        url:"projects/multitool",
         image:"projects/tool/closed dynamic.jpg",
         dark:true
     },
     {
         title:"Punch and Die",
-        url:"projects/punch.html",
+        url:"projects/punch",
         image:"projects/punch/full closeup.jpg",
         dark:true
     },
     {
         title:"Clockmaker's Heat Engine",
-        url:"projects/engine.html",
+        url:"projects/engine",
         image:"projects/engine/front tilt tail.jpg",
         // dark:true
     },
@@ -29,15 +35,15 @@ cards = [
     //     image:"assets/engine.png",
     // },
     {
-        title:"Custom Twist-Pen",
-        url:"projects/twistpen.html",
-        image:"projects/twistpen/pen photo-2.jpg",
+        title:"Quadruped Walking Robot",
+        url:"projects/walkingrobot",
+        image:"projects/walkingrobot/walkingrobot.png",
         dark: true,
     },
     {
-        title:"Quadruped Walking Robot",
-        url:"projects/walkingrobot.html",
-        image:"projects/walkingrobot/walkingrobot.png",
+        title:"Custom Twist-Pen",
+        url:"projects/twistpen",
+        image:"projects/twistpen/pen photo-2.jpg",
         dark: true,
     },
 ]

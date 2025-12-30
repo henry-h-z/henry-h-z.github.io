@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Articulated Fish</title>
+    <meta name="description" content="Articulated Fish Toy">
+    <meta name="author" content="Henry Zhao">
+
+    <meta property="og:title" content="Articulated Fish">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="henry-h-z.github.io/projects/fish">
+    <meta property="og:description" content="Articulated Fish Toy">
+    <meta property="og:image" content="favicon.ico">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="fish/fish.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- for templating -->
+    <div class="footer move3 bg" id="footerLight"></div>
+
+    <div class="content" id="content">
+        <div class="topbar">
+            <div class="backbutton" onclick="goback()">← Back</div>
+        </div>
+        <!-- <div class="sketch left"></div>
+        <div class="sketch right"></div>
+        <div class="sketch top"></div>
+        <div class="sketch bottom"></div> -->
+
+        <div class="spacer top"></div>
+
+        <div class="body">
+
+            <div style="display: flex; width: 100%; flex-direction: row; flex-wrap: wrap;">
+                
+                <!-- <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing back.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div> -->
+
+                <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%; order:-100;">
+                    <p style="text-align: center; font-size: min(8vh,5vw); margin: 0 0 3vmin 0;">--O- &nbspArticulated Fish&nbsp -O--</p>
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="fish/overall.jpg" style="flex: 2 1 300px; object-fit: cover; width: 100%; border: max(2px, 0.2vw) #8a8a8a solid">
+                    <div style="height: auto; flex: 1 3 150px;  width: 100%; display: flex; flex-direction: column; flex-wrap: wrap; gap: 2vw">
+                        <img src="fish/black close.jpg" style="flex: 1 1 auto; object-fit: contain; width: 100%; border: max(2px, 0.2vw) #8a8a8a solid">
+                        <img src="fish/white close.jpg" style="flex: 1 1 auto; object-fit: contain; width: 100%; border: max(2px, 0.2vw) #8a8a8a solid">
+                    </div>
+                </div>
+
+                <div style="height: auto; flex: 1 1 auto; width: 100%;">
+                    <p style="padding: 2.5vw 5vw 2.5vw 5vw; text-wrap: wrap; line-height: 120%; border: max(2px, 0.2vw) #8a8a8a solid">
+                        Manufactured from 6061 aluminum on a Haas Mini Mill using fixture plate <br style="margin: 0 0 2% 0;">
+                        Head subdivision modelled in Blender, bones and fins modelled parametrically in solidworks <br style="margin: 0 0 2% 0;">
+                        3D CAM designed in Mastercam with appropriate feeds and speeds <br style="margin: 0 0 2% 0;">
+                        Machined in 2 halves, pinned and glued together, and finished with sanding and bead-blasting
+                    </p>
+                </div>
+
+                <div style="height: auto; flex: 1 0 0; min-width: calc(100% - 2vw); display: flex; flex-direction: row; flex-wrap: wrap; gap: 2vw">
+                    <img src="fish/render.png" style="flex: 2 1 300px; object-fit: cover; width: 100%; border: max(2px, 0.2vw) #8a8a8a solid">
+                    <img src="fish/blender.png" style="flex: 2 1 300px; object-fit: cover; width: 100%; border: max(2px, 0.2vw) #8a8a8a solid">
+                </div>
+
+                <!-- <div style="height: auto; flex: 1 1 0; padding: 0; min-width: 100%">
+                    <img src="engine/drawing top.png" style="object-fit: contain; width: 100%; max-width: 100%; min-width: 100px;">
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="spacer bottom"></div>
+        
+    </div>
+
+    <!-- for templating -->
+    <div class="footer move3" id="footerBody"></div>
+
+    <!-- <script src="carddata.js" defer></script> -->
+    <script src="global.js" defer></script>
+    
+</body>
+</html>

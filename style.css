@@ -3,7 +3,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: #7a7a7a;
-    --amcardinrow: 2;
+    --amcardinrow: 3;
 }
 
 .header {
@@ -34,6 +34,10 @@ body {
 }
 
 .footer.move3 {
+    transform: translateY(100%);
+}
+
+.footer.movespec {
     transform: translateY(100%);
 }
 
@@ -147,6 +151,12 @@ body {
     }
 }
 
+@media screen and (max-width: 800px) {
+    body {
+        --amcardinrow: 2;
+    }
+}
+
 .cardimage {
     position:absolute;
     top:0;
@@ -255,6 +265,7 @@ body {
     transition: transform 300ms, left 300ms, bottom 300ms;
     pointer-events: none;
     backface-visibility: hidden;
+    border: 0.25vw #323232 solid;
 }
 
 .cardanim.move1 {
@@ -267,4 +278,75 @@ body {
     left: 50% !important;
     bottom: 18vmin !important;
     transform: translateX(-50%) translateY(190%) rotateY(180deg); 
+}
+
+.blanker {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #000;
+    /* user-select: none;
+    pointer-events: none; */
+    cursor: pointer;
+    transition: opacity 400ms ease-in-out;
+}
+
+.blanker.active {
+    opacity: 0.7;
+    overscroll-behavior: contain;
+}
+
+.aboutmebox {
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    width: 65vw;
+    height: 100vh;
+    background-color: #fcfcfc;
+    transform: translateX(-60%) translateY(100%) rotate(15deg);
+    border-radius: 2vw;
+
+    transition: transform 600ms ease-in-out;
+    
+    /* margin: 3vw; */
+
+    padding: 5vw;
+
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.aboutmebox h1 {
+    font-size: 3vmin;
+    margin: 0 0 2vmin 0;
+}
+
+.aboutmebox p {
+    line-height: 150%;
+    font-size: 2vmin;
+    margin: 0;
+}
+
+.aboutmebox.active {
+    transform: translateX(-50%);
+}
+
+.aboutmeX {
+    position: absolute;
+    top: 2vmin;
+    right: 6vmin;
+    font-size: 3.5vmin !important;
+
+    width: 0;
+    cursor:pointer;
+    color: #888;
+}
+
+.aboutmeX:hover {
+    color: #aaa;
 }
