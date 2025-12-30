@@ -173,6 +173,6 @@ function abtmeHide() {
 }
 
 // 1 day = 24hr * 60min * 60sec * 1000ms
-if(!(abtmeLastClose = localStorage.getItem("abtmeTime")) || abs(Date.now() - abtmeLastClose) > 1 * 24 * 60 * 60 * 1000) {
+if(!(abtmeLastClose = localStorage.getItem("abtmeTime")) || Math.abs(Date.now() - abtmeLastClose) > 1 * 24 * 60 * 60 * 1000) {
     abtmeShow();
 }
