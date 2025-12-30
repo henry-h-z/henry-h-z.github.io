@@ -1,5 +1,11 @@
 cards = [
     {
+        title:"Cuckoo Clock",
+        url:"projects/clock.html",
+        image:"projects/fish/black close.jpg",
+        dark:true
+    },
+    {
         title:"Articulated Fish",
         url:"projects/fish",
         image:"projects/fish/black close.jpg",
